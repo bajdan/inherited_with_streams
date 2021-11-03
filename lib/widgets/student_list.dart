@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:inherited_with_streams/models/student.dart';
 import 'package:inherited_with_streams/widgets/inherited_stream_widget.dart';
 
-class StudentList extends StatelessWidget {
+class StudentList extends StatefulWidget {
   const StudentList({Key? key}) : super(key: key);
 
+  @override
+  State<StudentList> createState() => _StudentListState();
+}
+
+class _StudentListState extends State<StudentList> {
   @override
   Widget build(BuildContext context) {
     context.dependOnInheritedWidgetOfExactType<InheritedStreamWidget>()?.pushAllStudents();

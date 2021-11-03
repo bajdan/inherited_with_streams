@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:inherited_with_streams/models/student.dart';
 import 'package:inherited_with_streams/widgets/inherited_stream_widget.dart';
 
-class StudentInfo extends StatelessWidget {
+class StudentInfo extends StatefulWidget {
   const StudentInfo({Key? key}) : super(key: key);
 
+  @override
+  State<StudentInfo> createState() => _StudentInfoState();
+}
+
+class _StudentInfoState extends State<StudentInfo> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

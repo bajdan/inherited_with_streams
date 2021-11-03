@@ -23,7 +23,7 @@ class StudentStorage {
           name: _names[_random.nextInt(5)],
           surname: _surnames[_random.nextInt(5)],
           group: 'DI-${110 + _random.nextInt(2)}',
-          age: 18 + Random().nextInt(2));
+          age: 18 + _random.nextInt(2));
     });
   }
 
@@ -31,3 +31,5 @@ class StudentStorage {
     return _students;
   }
 }
+
+
